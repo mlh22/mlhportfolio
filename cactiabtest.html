@@ -1,0 +1,168 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A/B Testing</title>
+    <link rel="stylesheet" href="abtest.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="display-1">A/B Testing: cact-us</h1>
+      </div>
+    </header>
+
+    <div class="tested-sites">
+      <h2 class="display-3">Website Designs A and B</h2>
+      <br>
+      <div class="row">
+        <div class="col pic-box">
+          <img class="img-fluid" src="./images/cactiab/web_versionA.png" alt="cactus shopping page with horizontal product layout">
+        </div>
+        <div class="col pic-box">
+          <img class="img-fluid" src="./images/cactiab/web_versionB.png" alt="cactus shopping page with vertical product layout">
+        </div>
+      </div>
+      <p>The above images are the two versions of a website deployed as a means of allowing users to buy cacti. We were 
+        given the task of determining, using data collection and statistical analysis, which of two designs was more optimal 
+        for users and why. This was done by assigning a task to all users and measuring completion time for the task, as well 
+        as the rate at which a user returned to the shopping page after completing the task.
+      </p>
+    </div>
+
+    <div class="hypos">
+      <h2 class="display-3">Hypothesis</h2>
+      <br>
+      <div class="row">
+        <div class="col hypo-box">
+          <h3>Null Hypothesis</h3>
+          <ul>
+            <li>Time to Completion: Changing the layout of the way products are listed on a shopping website will have no effect 
+              on the time users spend browsing through and interacting with items on the page.</li>
+            <li>Return Rate: Changing the layout of product listings on a website will have no impact on whether or not users 
+              will return to the website; they will or will not return for personal reasons outside of the website design itself.
+            </li>
+          </ul>
+        </div>
+        <div class="col hypo-box">
+          <h3>Alternate Hypothesis</h3>
+          <ul>
+            <li>Time to Completion: As compared to version B, which is closer to the original website provided in the stencil, 
+              users will spend less time on version A since the elements are aligned horizontally such that users can see all of 
+              the elements better. For specificity, I would like to see at least a 50% decrease in the time taken for design A as 
+              opposed to that of design B.</li>
+            <li>Return Rate: In the same vein, users will likely return to version A more since the layout is less conducive 
+              towards summing a total of values and due to uncautioned speed. We are used to adding values as we go down the page, 
+              so adding vertically may cause more miscalculations, leading to a higher return rate to fulfill the task.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="data-info">
+      <h2 class="display-3">Data Collection</h2>
+      <br>
+      <div class="row">
+        <div class="col data-box">
+          <p>
+          In order to gain insight on the usability of the website, fellow students were tasked with placing an order 
+          of cacti valuing at least $150. In a large-scale study, I would ideally like to expand test users to other demographics. 
+          </p><br>
+          <p>
+          There are a couple of pitfalls of having a large number of students in a class as a data sample set. While it is easy 
+          to collect data because we are already given a large group of users, all of the students in the class had the same 
+          A/B test assignments, and were submitting data for multiple cactus-buying websites with mock products. Thus, the 
+          data found may not be fully accurate. Additionally, designs are usually tailored towards specific user, and students 
+          are not necessarily representative of the full market of cactus buyers. 
+          </p>
+        </div>
+      </div>  
+    </div>
+
+    <div class="log-analysis">
+      <h2 class="display-3">Statistical Analysis</h2>
+      <br>
+      <div class="row">
+        <div class="col align-self-center log-box">
+          <p>
+          After obtaining the logs from the deployed website, I sorted through the data and completed several calculations 
+          in order to obtain information on how long users took to navigate through the website and complete the task, and 
+          how many users did or did not return to the shopping page. I also made sure to remove extremities in the values.
+          </p>
+        </div>
+        <div class="col log-box-img">
+          <img class="img-fluid" src="./images/cactiab/csv_data.png" alt="data gathered from website logs">
+        </div>
+      </div>  
+      <div class="row">
+        <div class="col log-box-img">
+          <img class="img-fluid" src="./images/cactiab/code_results.png" alt="values obtained from p-test, via t-test and chi-squared testing">
+        </div>
+        <div class="col align-self-center log-box">
+          <p>With these values, I wrote a Python program to display p-score values for each parameter. For completion 
+            time I utilized two sample t-testing, and for return rate I used chi-squared testing. From this I obtained the 
+            following values:
+            <ul>
+              <li>t score for completion time: about -1.44838</li>
+              <li>p score for completion time: about 0.08906</li>
+              <li>chi squared value for return rate: about 0.91667</li>
+              <li>p score from return rate: about 0.33835</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col align-self-center log-box-last">
+          <br>
+          <p>Based on the results and our baseline (significance level) around a p-score of 0.05, I was unable to reject the null hypothesis 
+            because for both parameters, the p scores were larger than 0.05.
+            <br>
+            Completion time does come very close though...
+          </p>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="infographic">
+      <h2 class="display-3">Infographic</h2>
+      <br>
+      <div class="infographic-img">
+        <img class="img-fluid mx-auto" src="./images/cactiab/abtesting_infographic.png" alt="infographic displaying simplified results of statistics">
+      </div>
+    </div>
+
+    <div class="takeaways">
+      <h2 class="display-3">Final Takeaways</h2>
+      <br>
+      <div class="row">
+        <div class="col align-self-center takeaway-box">
+          <ul>
+            <li>I felt that a huge limitation to the data collected for this project, as mentioned before, is 
+              the fact that students were asked to click through other students' (admittedly similar) websites in one 
+              sitting, leading to some skewing of data in terms of clickthrough speed.
+            </li>
+            <li>The above point speaks towards good principles in design testing, where you generally do want a user 
+              who has less experience with something. Being that many designs for this cactus-purchasing website were similar, 
+              users may have already become accustomed to the general functionality of the site. Thus, it is important to have 
+              new users testing everything.
+            </li>
+            <li>Websites are generally quicker to navigate when there is a logical, chronological order to navigate them.</li>
+            <li>Interpreting logs can actually be surprisingly subjective. My own readings of logs were based more on the very 
+              last time a user loaded a page, which took priority over the final interaction on the page.
+            </li>
+            <li>In general, A/B testing is a powerful tool but only when you know what users to test on and when you are 
+              willing to sit down and crunch numbers to analyze data.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>

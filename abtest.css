@@ -1,0 +1,151 @@
+/* Put your style information here! */
+header{
+    background: url("cacti-background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    position:absolute;
+    left:0px;
+    right:0px;
+    width:100%;
+    filter: saturate(120%) contrast(70%) brightness(120%);
+    opacity: 80%;
+    transform: translateY(-30%);
+    height: calc(40.15vh + 30%);  
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+/* citation for frosted image creation: 
+    https://webdesign.tutsplus.com/tutorials/how-to-create-a-frosted-glass-effect-in-css--cms-32535 */
+.container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+    margin: -20px;
+    background: inherit;
+}
+
+.container{
+    width: 30rem;
+    height: 10rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container h1{
+    z-index: 2;
+    color: black;
+    font-weight: 600;
+}
+
+.tested-sites{
+    margin-top: 50vh;
+    display: inline-block;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+}
+
+.pic-box{
+    margin: 2vw;
+}
+
+.hypos{
+    display: inline-block;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+}
+
+.hypo-box{
+    margin: 2vw;
+    background-color: #ecedd5;
+    padding: 2vw;
+}
+
+.data-info{
+    display: inline-block;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+}
+
+.data-box{
+    margin: 2vw;
+    background-color: #ecedd5;
+    padding: 2vw;
+}
+
+.log-analysis{
+    display: inline-block;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+}
+
+.log-box{
+    margin: 2vw;
+    background-color: #ecedd5;
+    padding: 2vw;
+}
+
+.log-box-img{
+    margin: 2vw;
+    padding: 2vw;
+    padding-left: 5vw;
+}
+
+.log-box-last{
+    margin: 2vw;
+    background-color: #ecedd5;
+    padding: 2vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    text-align: center;
+}
+
+.infographic{
+    display: inline-block;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+    width: 100%;
+}
+
+.infographic-img{
+    display: inline-block;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.infographic-img img{
+    display: block;
+    width: 50vw;
+    height: auto;
+    align-content: center;
+}
+
+.takeaways{
+    display: inline-block;
+    padding: 5vw;
+}
+
+.takeaway-box{
+    margin: 2vw;
+    padding: 2vw;
+}
+
