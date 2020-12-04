@@ -1,0 +1,150 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Development - RR Record Shop</title>
+    <link rel="stylesheet" href="devstyle.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="display-1">Development: RR Record Shop</h1>
+      </div>
+    </header>
+
+    <div class="assignment-context">
+      <h2 class="display-3">The Assignment</h2>
+      <br>
+      <div class="describe">
+        <p>For this assignment, we were asked to develop a list-based application and incorporate an aggregator function, all 
+          using React. React is a programming language combining elements of Javascript and HTML/CSS to asynchronously render 
+          components of an application - in other words, loading different parts of an application webpage at different times 
+          depending on set changes that occur in the application.
+          <br>
+          <br>
+          Being a music enthusiast, my instinct was to incorporate my love for music into this assignment by emulating and 
+          creating a record shop application. I aimed to create a project that had hints of a retro feel, but had a clean, 
+          timeless design. I gathered names of albums that I or friends I knew enjoyed across three different genres, and 
+          put together a bunch of properties and potential filtering ideas that I could use.
+          <br>
+          <br>
+        </p>
+        <p class="h4 text-center">The problem, however? I hardly knew anything about how to create a React application.</p>
+      </div>
+    </div>
+
+    <div class="organization">
+      <h2 class="display-3">The Organization</h2>
+      <br>
+      <div class="row">
+        <div class="col">
+          <img src="./images/rrrecords/structure.png" alt="organization of components within the application" class="img-fluid align-self-center">
+        </div>
+        <div class="col org-box align-self-center">
+          <p>In order to develop this application, I had to put a lot of thought into how components would 
+            communicate with one another. The diagram depicts the flow of information between my components. The App 
+            component handles the main rendering, and sends the list of records to the filtered list component, which 
+            filters the list based on given parameters, and sends the filtered list to the sorted list class. This class 
+            sorts the products accordingly and sends them to the albums component to be rendered. The cart, meanwhile, 
+            receives the shopping list as well as related functions. The cart component acts as a div to hold information 
+            about pricing and totals, and sends information to the cart items component for rendering.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="styling">
+      <h2 class="display-3">The Styling</h2>
+      <br>
+      <div class="row">
+        <div class="col style-words-box align-self-center">
+          <p>
+          My main goals with the design were to incorporate both timeless contemporary styles and retro designs. While the 
+          layout of the website is very clean with neatly-organized divs and cards to hold products and elements, the font 
+          for the title, as well as depiction of record players, funky colors, and use of gradients bring in the older feel. 
+          Additionally, I wanted to focus on album art, and the design as it is now gives the feel of shopping for vinyl 
+          records, with large square images reminiscent of record sleeves. </p>
+        </div>
+        <div class="col">
+          <img src="./images/rrrecords/styleguide.png" alt="style guide depicting colors, fonts, buttons, and menus in the application" class="img-fluid align-self-center">
+        </div>
+      </div>
+    </div>
+
+    <div class="struggles-main">
+      <h2 class="display-3">The Struggles</h2>
+      <br>
+      <div class="struggles">
+        <p>In learning how to program in React, I encountered quite a few issues. My main struggles were with the asynchronous 
+          updating of states in React. Having come from a Java/Python background, I was much more used to single-threaded 
+          languages, where the code I wrote would run chronologically, and the next line of code would not be called until 
+          the previous line has completed running. Thus, adjusting to the asynchronous rendering methods of React was tricky 
+          because I would often call methods on a state after I had set it. This would often lead to the previous version of 
+          the state being used in my methods, resulting in many, many odd results. However, once I became adjusted to React, I 
+          picked up on this rendering style by making sure that I relied less on operating directly on state objects and focused 
+          more heavily on pulling the information from the state beforehand, completing my operations without direct use of 
+          state objects, and then setting the state.
+        </p>
+      </div>
+    </div>
+
+    <div class="final-product">
+      <h2 class="display-3">The Final Product</h2>
+      <br>
+      <div class="screenshot">
+        <img src="./images/rrrecords/screenshot-dev.png" alt="screenshot of finished product" class="img-fluid mx-auto">
+      </div>
+      <p class="links">
+        <br>
+        Link to the website: <a href="https://rr-recordshop.herokuapp.com">RR Record Shop</a> 
+        <br>
+        Link to the GitHub repository: <a href="https://github.com/mlh22/recordshop-react">Record Shop GitHub repo</a>
+      </p>
+      <br>
+      <h3 class="display-5">Features</h3>
+      <br>
+      <div class="features">
+        <ul>
+          <li>Sorting ability by year of release, newest to oldest and oldest to newest, or alphabetically from A to Z</li>
+          <li>Filtering by genre of the album (k-pop, rock, or pop) or by decade in which the album was released 
+            (2020s, 2010s, 2000s, or pre-2000)</li>
+          <li>Aggregation of the total number of songs, total number of albums, and prices based on calculations using songs 
+            and quantity</li>
+          <li>Accessibility was highly prioritized - I made sure to be very clear with information provided and 
+            provided extreme detail within alt tags </li>
+          <li>Responsive design elements were also heavily used in this project</li>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="takeaways">
+      <h2 class="display-3">Takeaways</h2>
+      <br>
+      <div class="row">
+        <div class="col takeawaybox">
+          <p>Structure is incredibly important!! Because all of the states exist in the App component, there needs to 
+            be strong communication between components in the application to pass along vital information.
+          </p>
+        </div>
+        <div class="col takeawaybox">
+          <p>Accessibility!! My application (as well as many other applications) are heavily visual experiences, which can 
+            abandon lots of users. Thus, using descriptive, meaningful alt tags, spacing elements out effectively, and 
+            maintaining hierarchal structure can go a long way in making programs accessible for others.
+          </p>
+        </div>
+        <div class="col takeawaybox">
+          <p>Asynchronous rendering!! This was my first time using React, and this project gave me an opportunity to work with 
+            this language and expand the logical thinking I had developed with previous coding experiences to the component 
+            structure here.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
