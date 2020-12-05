@@ -1,0 +1,92 @@
+/* quattrocento-regular - latin */
+@font-face {
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/quattrocento-v12-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/quattrocento-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/quattrocento-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/quattrocento-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/quattrocento-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/quattrocento-v12-latin-regular.svg#Quattrocento') format('svg'); /* Legacy iOS */
+}
+
+/* quattrocento-sans-regular - latin */
+@font-face {
+    font-family: 'Quattrocento Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/quattrocento-sans-v13-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/quattrocento-sans-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/quattrocento-sans-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/quattrocento-sans-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/quattrocento-sans-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/quattrocento-sans-v13-latin-regular.svg#QuattrocentoSans') format('svg'); /* Legacy iOS */
+  }
+
+.topPane{
+    background: url("./images/filtered-bg.png") center fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+
+}
+
+.invisible-div {
+    width: 100vw;
+    margin-top: 20vh;
+    height: 80vh;
+    position: relative;
+}
+
+/* citation for frosted image creation: 
+    https://webdesign.tutsplus.com/tutorials/how-to-create-a-frosted-glass-effect-in-css--cms-32535 */
+
+
+.frosted{
+    width: 50rem;
+    height: 20rem;
+    background-color: rgba(150, 150, 150, 0.5);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.frosted h1{
+    z-index: 2;
+    color: #3d1d58;
+    font-weight: 600;
+    font-family: 'Quattrocento';
+    font-size: 15vh;
+}
+
+.pagesbar {
+    float: right;
+    background: #7FB6BA;
+    margin: 1em;
+    padding:2em;
+}
+
+
+.projectsa{
+    color: white;
+    margin-left: 0.5em;
+    margin-right: 1em;
+}
+
+.resumea{
+    color: white;
+    margin-right: 1em;
+}
+
+.abouta{
+    color:white;
+}
+

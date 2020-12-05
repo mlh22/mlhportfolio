@@ -1,62 +1,80 @@
-body{
-    background-color: blanchedalmond;
-    font-family: CenturyGothic, AppleGothic, sans-serif;
-    margin:0;
-    padding:2em;
-}
-
-#titleonpage{
-    text-align: center;
-    font-family: CenturyGothic, AppleGothic, sans-serif;
-    font-size: 10vh;
-}
-
-.introrow{
-    margin:3em;
-    padding: 2em;
+header{
+    background: url("./images/garageband/music_tracks.png");
+    background-attachment: fixed;
+    background-size: cover;
+    position:absolute;
+    left:0px;
+    right:0px;
+    width:100%;
+    filter: saturate(120%) contrast(70%) brightness(120%);
+    opacity: 80%;
+    transform: translateY(-10%);
+    height: calc(40.15vh + 10%);  
+    display: grid;
     align-items: center;
-    display:flex;
-    flex-direction:row;
-    background-color: #5f9ea0;
-    flex-wrap: nowrap;
     justify-content: center;
-    margin-bottom: 3em;
+}
+
+/* citation for frosted image creation: 
+    https://webdesign.tutsplus.com/tutorials/how-to-create-a-frosted-glass-effect-in-css--cms-32535 */
+.container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+    margin: -20px;
+    background: inherit;
+}
+
+.container{
+    width: 30rem;
+    height: 10rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    display: grid;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    font-size: 2vh;
 }
 
-.introrow img{
-    position:relative;
-    padding: 1em;
-    align-self: stretch;
-    flex-shrink: 1;
-    flex-grow: 1;
-    width: 1fr;
+.container h1{
+    z-index: 2;
+    color: black;
+    font-weight: 600;
 }
 
-.categories{
-    margin: 2em;
-    padding: 2em;
-    display:flex;
-    flex-direction: row;
-    background-color: #f1f1f1;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin-bottom: 3em;
-    overflow:hidden;
+.intro-section{
+    margin-top: 50vh;
+    display: inline-block;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
 }
 
-.categories li{
-    font-size:2vh;
+.box-of-text{
+    margin:2vw;
+    padding:2vw;
+    background-color:#89d8e8;
 }
 
+.user-research{
+    display: inline-block;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+}
 
-
-.introrow img{
-    display:flex;
-    flex-direction: column;
-    flex-shrink: 2;
-    flex-grow: 2;
+.qcat{
+    margin:2vw;
+    padding:2vw;
+    background-color:#89d8e8;
 }
 
 .userrow{
@@ -80,119 +98,54 @@ body{
     font-size:2vh;
 }
 
-.grid{
-    display: grid;
-    grid-template-columns: 250px 1fr 1fr;
-    grid-template-rows: 30vw 30vw;
-}
-
-.describe{
-    margin:1em;
-    padding: 2em;
-    grid-row: 1/3;
-    grid-column: 1;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-
+.persona{
+    display: inline-block;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
 }
 
 .thinks{
-    margin:1em;
-    padding:1em;
-    background-color: #c65353;
-    grid-row: 1;
-    grid-column: 2;    
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+    margin:2vw;
+    padding:2vw;
+    background-color:#89d8e8;
 }
 
 .says{
-    margin:1em;
-    padding: 1em;
-    background-color:#ff9999;
-    grid-row: 2;
-    grid-column: 2;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+    margin:2vw;
+    padding:2vw;
+    background-color:#89d8e8;
 }
 
 .does{
-    margin:1em;
-    padding: 1em;
-    background-color: #965a78;
-    grid-row: 2;
-    grid-column: 3;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+    margin:2vw;
+    padding:2vw;
+    background-color:#89d8e8;
 }
 
 .feels{
-    margin: 1em;
-    padding: 1em;
-    background-color: #da8b57;
-    grid-row: 1;
-    grid-column: 3;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+    margin:2vw;
+    padding:2vw;
+    background-color:#89d8e8;
 }
-
-.persona li{
-    text-align: center;
-    list-style: none;
-    font-size: 3vh;
-}
-
-.sage{
-    margin:1em;
-    background-color: burlywood;
-    align-items: center;
-    padding: 1em;
-    display:flex;
-    overflow: hidden;
-}
-
-.martin{
-    margin:1em;
-    background-color:rgba(148, 112, 66, 0.603);
-    align-items: center;
-    padding: 1em;
-    display:flex;
-    overflow: hidden;
-}
-
-.describe p{
-    font-size: 2.1vh;
-}
-
-
 
 .storyboarddiv{
-    margin: 3em;
-    padding: 2em;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    background-color: #5f9ea0;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin-bottom: 3em;
-    overflow: hidden;
-    font-size: 2vh;
+    display: inline-block;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+}
+
+.storyboard-describe{
+    margin:2vw;
+    padding:2vw;
+    background-color:#89d8e8;
 }
 
 .storyboarddiv img{
-    position:relative;
-    padding: 1em;
-    align-self: stretch;
-    flex-shrink: 1;
-    flex-grow: 1;
+    display: inline-block;
+    align-self: center;
+    justify-content: center;
+    margin:2vw;
+    padding:2vw;
 }
