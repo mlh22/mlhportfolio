@@ -9,8 +9,8 @@ header{
     width:100%;
     filter: saturate(120%) contrast(70%) brightness(90%);
     opacity: 80%;
-    transform: translateY(-30%);
-    height: calc(40.15vh + 30%);  
+    transform: translateY(-10%);
+    height: calc(40.15vh + 10%);  
     display: grid;
     align-items: center;
     justify-content: center;

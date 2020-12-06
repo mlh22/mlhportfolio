@@ -15,8 +15,181 @@
       </div>
     </header>
 
-    <div>
-      <p>Time to work</p>
+    <div class="context">
+      <h2 class="display-3">Background</h2>
+        <div class="context-text">
+            <p>
+                This program was created as a final project for a software engineering course I took. I worked 
+                alongside three other lovely individuals, all of whom had more experience than I. This project 
+                not only was an incredible opportunity to learn from my team and apply course knowledge in a practical 
+                context, but was also the reason how I ended up rediscovering my passion in computer science.
+            </p>
+        </div>
+    </div>
+
+    <div class="goals">
+        <h2 class="display-3">Project Goals</h2>            
+        <div class="goals-text">
+            <p>
+                We've all played the game before - someone plays a random song and guessing the correct songs helps 
+                you win the game. This game - which my team and I creatively called the "Guess the Song Game" - has 
+                been played on well-known talk shows, at parties, with friends, and is a generally fun game. The game 
+                is much harder to play, however, in a time of social distancing and awkward lags on video conferencing 
+                apps. As game enthusiasts and music lovers, my team and I set out to recreate an online version of the 
+                game that would not only allow multiple people to play, but would also auto-generate a playlist tailored 
+                to the specific users in the game to create a mix of varied interests, allow for music discovery, and 
+                allow everyone to join in and play.
+            </p>
+            <img class="img-fluid home-img" src="./images/sonicskillz/home.png" alt="home screen content">
+        </div>
+    </div>
+
+    <div class="mainparts">
+        <h2 class="display-3">Main Challenges</h2>
+        <div class="mainparts-text">
+            <p>
+                While this program was born from a final project, there was nothing very "final" about this project. This 
+                assignment was an opportunity for all of us to learn new developer techniques that we hadn't learned in 
+                class. This project resembled many firsts for me:
+            </p>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col mainparts-col">
+                <h5>Server-Client Interaction: </h5> 
+                <p>An important segment lending to the multiplayer 
+                functionality of this project was creating the connection between server and client. The server would 
+                allow for simultaneous running of all games,, while the client would keep track of a user's music 
+                information, user data, and game information.</p>
+            </div>
+            <div class="col mainparts-col">
+                <h5>JavaScript: </h5>
+                <p>Before this project, I very much lacked experience in using JavaScript, 
+                    and so as I coded, I picked up some of the semantics and language.</p>
+            </div>
+            <div class="col mainparts-col">
+                <h5>API Usage: </h5>
+                <p>We chose to use the Spotify API in order to gain information on a user's 
+                    music taste in order to create the <strong>playlist generating algorithm</strong>, which will be detailed 
+                    in the next section. Spotify had lots of data points available, and because of this and its overwhelming 
+                    popularity, we decided it would be the best authenticator and API to use for our game.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="algorithm">
+        <h2 class="display-3">Playlist-Generating Algorithm</h2>
+        <div class="row">
+            <div class="col align-self-center algorithm-text">
+                <p>As per the assignment, we were asked to focus our programs on a central algorithm, and ours was 
+                    our own original playlist-generating algorithm. The purpose of this algorithm was to generate 
+                    playlists that would allow for fair gameplay for all players. We generate this playlist using 
+                    a user's Spotify data, as well as a set database of songs for users who do not have sufficient 
+                    Spotify data. 
+                </p>
+            </div>
+            <div class="col">
+                <img class="img-fluid" src="./images/sonicskillz/playlist_algo_dia.png" alt="how information for the algorithm is passed">
+            </div>
+        </div>
+    </div>
+
+    <div class="lofi">
+        <h2 class="display-3">Lo-fi Prototypes</h2>
+        <div class="sketches">
+            <h3 class="display-5">Sketches</h3>
+            <p>The initial prototype of our game had featured Sonic Skillz as a main server to host two games: Guess 
+                The Song and Word Association. The sketches that my team and I came up with are featured below:
+            </p>
+            <div class="row">
+                <div class="col">
+                    <img class="img-fluid" src="./images/sonicskillz/lofi_sketch.jpeg" alt="sketch of guess the song game">
+                </div>
+                <div class="col">
+                    <img class="img-fluid" src="./images/sonicskillz/lofi_sketch_word.jpg" alt="sketch of word association game">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="figma">
+            <h3 class="display-5">Mock-Ups</h3>
+            <p>After putting our sketches and other ideas together, we created official mock-ups of our 
+                program. Some of our frames are featured below:
+            </p>
+            <div class="row figmaimg">
+                <div class="col">
+                    <img class="img-fluid" src="./images/sonicskillz/title_screen_proto.png" alt="prototyped title screen">
+                </div>
+                <div class="col">
+                    <img class="img-fluid" src="./images/sonicskillz/share_code_proto.png" alt="prototyped game code sharing">
+                </div>
+                <div class="col">
+                    <img class="img-fluid" src="./images/sonicskillz/settings_proto.png" alt="prototyped game settings">
+                </div>
+            </div>
+            <div class="row figmaimg">
+                <div class="col">
+                    <img class="img-fluid" src="./images/sonicskillz/waiting_proto.png" alt="prototyped waiting screen while one player takes a turn">
+                </div>
+                <div class="col">
+                    <img class="img-fluid" src="./images/sonicskillz/guess_proto.png" alt="prototyped screen for inputting song guess">
+                </div>
+                <div class="col">
+                    <img class="img-fluid" src="./images/sonicskillz/victory_proto.png" alt="prototyped winning screen">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="changes">
+        <h2 class="display-3">Evolution</h2>
+        <div class="changes-text">
+            <p>As we developed the project, many of our initial ideas, either due to time constraints or change in 
+                thinking, morphed into something new. 
+                <ul>
+                    <li>Initially, we wanted to create two games for the app; however, we decided that spending more 
+                        time developing one well-fleshed-out algorithm would be better move as opposed to creating two 
+                        algorithms that are less substantial
+                    </li>
+                    <li>We originally wanted to use a voting system to determine wins, where a guesser would make their 
+                        guess and other players would vote on whether or not the correct answer was given. We later decided 
+                        to incorporate a short spell-checking and name-normalizing algorithm so that the program, rather 
+                        that other players, can check for correct answers. We tested this substantially so that we could 
+                        account for edge cases in song names, such as if a song had a "(remix)" appended at the end of the 
+                        title, or if other artists' names showed up as features.
+                    </li>
+                    <li>Two days before we were due to present our full project, Spotify crashed entirely. With this 
+                        sudden crash, we decided for future reference to quickly depend on Spotify only for API information, 
+                        and switched to using a webplayer to play the songs in the game.
+                    </li>
+                    <li>
+                        As opposed to the initial idea of a waiting screen, other players are instead able to listen to 
+                        the song the guesser must figure out, and they are told the name of the song while it is not their turn.
+                    </li>
+                </ul>
+            </p>
+        </div>
+        <div class="row levelimg">
+            <div class="col">
+                <img class="img-fluid" src="./images/sonicskillz/easy_med_hard.png" alt="difficulty level select">
+            </div>
+            <div class="col">
+                <img class="img-fluid" src="./images/sonicskillz/new_guess.png" alt="guessing screen and timer">
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="end">
+        <h2 class="display-3">Final Product & End Notes</h2>
+        <div class="end-text">
+            <h4>Link to play Guess the Song <a href="https://sonicskillz.herokuapp.com/">on Sonic Skillz</a></h4>
+            <p>Creating this project, especially in the midst of a global pandemic, was incredible difficult 
+                and time-consuming but I was able to bring a lot of ideas to my team just as they brought lots 
+                of ideas and knowledge to me. From this project, I grew as a programmer both in skill and in 
+                self-confidence level, and I hope to create more substantial projects like this one in the future!
+            </p>
+        </div>
     </div>
 
 
