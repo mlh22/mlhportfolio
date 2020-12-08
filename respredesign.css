@@ -62,13 +62,34 @@
     font-weight: 600;
 }
 
+.pagesbar {
+    float: right;
+    background: #7FB6BA;
+    padding:1em;
+}
+
+.projectsa{
+    color: white;
+    margin-left: 0.5em;
+    margin-right: 1em;
+}
+
+.resumea{
+    color: white;
+    margin-right: 1em;
+}
+
+.abouta{
+    color:white;
+}
+
 body{
     font-family: Century Gothic, sans-serif;
     margin: 0px;
 }
 
 .introtowebsite{
-    margin-top: 50vh;
+    margin-top: 30vh;
     display: inline-block;
     padding-left: 5vw;
     padding-right: 5vw;

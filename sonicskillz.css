@@ -14,9 +14,31 @@ header{
     justify-content: center;
 }
 
+
+.pagesbar {
+    float: right;
+    background: #7FB6BA;
+    padding:2em;
+}
+
+.projectsa{
+    color: white;
+    margin-left: 0.5em;
+    margin-right: 1em;
+}
+
+.resumea{
+    color: white;
+    margin-right: 1em;
+}
+
+.abouta{
+    color:white;
+}
+
 /* citation for frosted image creation: 
     https://webdesign.tutsplus.com/tutorials/how-to-create-a-frosted-glass-effect-in-css--cms-32535 */
-.container:before {
+.container-item:before {
     content: '';
     position: absolute;
     top: 0;
@@ -27,9 +49,11 @@ header{
     filter: blur(10px);
     margin: -20px;
     background: inherit;
+    align-items: center;
+    justify-content: center;
 }
 
-.container{
+.container-item{
     width: 30rem;
     height: 10rem;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
@@ -43,14 +67,14 @@ header{
     overflow: hidden;
 }
 
-.container h1{
+.container-item h1{
     z-index: 2;
     color: black;
     font-weight: 600;
 }
 
 .context{
-    margin-top: 50vh;
+    margin-top: 30vh;
     display: inline-block;
     padding-left: 5vw;
     padding-right: 5vw;

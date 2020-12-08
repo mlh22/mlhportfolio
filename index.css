@@ -26,6 +26,20 @@
          url('./fonts/quattrocento-sans-v13-latin-regular.svg#QuattrocentoSans') format('svg'); /* Legacy iOS */
   }
 
+/* caveat-regular - latin */
+@font-face {
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/caveat-v9-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/caveat-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/caveat-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/caveat-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/caveat-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/caveat-v9-latin-regular.svg#Caveat') format('svg'); /* Legacy iOS */
+  }
+
 .topPane{
     background: url("./images/filtered-bg.png") center fixed;
     background-size: cover;
@@ -33,6 +47,14 @@
     height: 100vh;
     z-index: -1;
 
+}
+
+.partialPane{
+    background: url("./images/filtered-bg.png") center fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 40vh;
+    z-index: -1;
 }
 
 .invisible-div {
@@ -47,7 +69,7 @@
 
 
 .frosted{
-    width: 50rem;
+    width: 80vw;
     height: 20rem;
     background-color: rgba(150, 150, 150, 0.5);
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
@@ -64,7 +86,7 @@
     color: #3d1d58;
     font-weight: 600;
     font-family: 'Quattrocento';
-    font-size: 15vh;
+    font-size: 8rem;
 }
 
 .pagesbar {
@@ -73,7 +95,6 @@
     margin: 1em;
     padding:2em;
 }
-
 
 .projectsa{
     color: white;
@@ -90,3 +111,166 @@
     color:white;
 }
 
+.project-page-head{
+    font-family: 'Quattrocento';
+    text-align: center;
+    padding: 1em;
+}
+
+.about-page-head{
+    font-family: 'Quattrocento';
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+}
+
+.card-rows{
+    justify-content: center;
+    align-content: center;
+}
+
+.about-pol{
+    margin: 3em;
+    width: 30vw;
+    height: 70vh;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #E9E6EB !important;
+    flex-wrap: wrap;
+}
+
+.about-pol h4{
+    font-family: 'Caveat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.polaroid{
+    margin: 3em;
+    width: 30vw;
+    height: 80vh;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #E9E6EB !important;
+    flex-wrap: wrap;
+}
+
+.polaroid h4{
+    font-family: 'Caveat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.month-year{
+    font-family: 'Caveat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.pol-img{
+    padding: 1em;
+    width: calc(30vw-2em);
+    height: 45vh;
+}
+
+.view-btn{
+    float: right;
+    background-color: #F3BBAE !important;
+}
+
+.view-btn:hover{
+    filter: brightness(90%);
+}
+
+
+
+
+
+
+
+/* all media queries */
+@media only screen and (max-width:990px){
+    .frosted h1{
+        font-size: 5rem!important;
+    }
+    .polaroid{
+        width: 38vw!important;
+        height: 85vh;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        background-color: #E9E6EB !important;
+        flex-wrap: wrap;
+    }
+    .card-rows{
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+@media only screen and (max-width:720px){
+    .frosted h1{
+        font-size: 5rem!important;
+    }
+    .polaroid{
+        width: 40vw!important;
+        height: 75vh;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        background-color: #E9E6EB !important;
+        flex-wrap: wrap;
+    }
+    .pol-img{
+        height: 40vh;
+    }
+    .card-rows{
+        justify-content: center;
+        align-content: center;
+    }
+    .polaroid h4{
+        font-size: 1.3em;
+    }
+}
+
+
+
+@media (max-width:576px){
+    .frosted h1{
+        font-size: 3.5rem!important;
+    }
+    .polaroid{
+        margin-left: auto;
+        width: 60vw!important;
+        height: 75vh;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        background-color: #E9E6EB !important;
+        flex-wrap: wrap;
+    }
+    .card-rows{
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+@media only screen and (max-width:350px){
+    .polaroid{
+        margin-left: auto;
+        width: 65vw!important;
+        height: 65vh;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        background-color: #E9E6EB !important;
+        flex-wrap: wrap;
+    }
+    .polaroid h4{
+        font-size: 1em;
+    }
+    .pol-img{
+        height: 30vh;
+    }
+    p{
+        font-size: 0.7em;
+    }
+    span{
+        font-size: 0.6em;
+    }
+    .pagesbar {
+        float: left;
+        background: #7FB6BA;
+        margin: 0.5em;
+        padding:0.5em;
+    }
+}

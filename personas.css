@@ -50,8 +50,30 @@ header{
     font-weight: 600;
 }
 
+.pagesbar {
+    display: block;    
+    float: right;
+    background: #7FB6BA;
+    padding:2em;
+}
+
+.projectsa{
+    color: white;
+    margin-left: 0.5em;
+    margin-right: 1em;
+}
+
+.resumea{
+    color: white;
+    margin-right: 1em;
+}
+
+.abouta{
+    color:white;
+}
+
 .context{
-    margin-top: 50vh;
+    margin-top: 30vh;
     display: inline-block;
     padding-left: 5vw;
     padding-right: 5vw;
