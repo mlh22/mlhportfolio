@@ -65,7 +65,7 @@
 .pagesbar {
     float: right;
     background: #7FB6BA;
-    padding:1em;
+    padding:0.5em;
 }
 
 .projectsa{
@@ -89,7 +89,7 @@ body{
 }
 
 .introtowebsite{
-    margin-top: 30vh;
+    margin-top: 40vh;
     display: inline-block;
     padding-left: 5vw;
     padding-right: 5vw;
