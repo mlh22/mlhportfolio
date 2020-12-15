@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Music - Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
+
+  <body>
+    <script>
+      function goToProjects(){
+        var projects = document.getElementById("project-title");
+        projects.scrollIntoView({behavior: "smooth"});
+      }
+    </script>
+
+    <header>
+        <div class="partialPane">
+          <nav class="navbar pagesbar d-inline-flex">
+            <ul class="navbar-nav d-inline-flex flex-row">
+                <li class="navbar-item p-2"><a class="nav-link projectsa" href="home.html"><span>Home</span></a></li>
+                <li class="navbar-item p-2"><a class="nav-link projectsa" href="home.html#project-title"><span>CS Projects</span></a></li>
+                <li class="navbar-item p-2"><a class="nav-link projectsa" href="music.html"><span>Music</span></a></li>
+                <li class="navbar-item p-2"><a class="nav-link resumea" href="resume.html"><span>Resume</span></a></li>
+                <li class="navbar-item p-2"><a class="nav-link abouta" href="about.html"><span>About</span></img>
+                </a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+    
+    
+    <h2 id="project-title" class="display-2 project-page-head">Music Works</h2>
+    <div class="container-fluid">
+      <div class='row card-rows'>
+        <div class="col-8 col-sm-7 col-md-6 col-lg-5">
+          <div class="card polaroid">
+            <img class="card-img-top pol-img" src="./images/music/ocean_rhythms.jpg" alt="ocean rhythms stuff">
+            <div class="card-body">
+              <h4 class="card-title display-5">Ocean Rhythms</h5>
+              <h5 class="card-subtitle month-year">10/2020</h6>
+              <p class="card-text">First solo single release</p>
+              <a href="https://push.fm/fl/4tjdrmt8" class="btn view-btn"><span>LISTEN</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+      <br>
+      Designed by Maliha Islam
+      <br>
+      Home page, about, music, and resume background images and self-photo photographed by Maliha Islam
+      <br>
+      Contents of pages written by Maliha Islam
+      <br>
+      Header images and polaroid thumbnails edited by Maliha Islam on Canva
+      <br>
+      </p>
+    </footer>
+
+
+  </body>
+</html>

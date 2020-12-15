@@ -4,26 +4,62 @@
   <head>
     <meta charset="utf-8">
     <title>A/B Testing</title>
-    <link rel="stylesheet" href="abtest.css">
     <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="abtest.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
   </head>
 
-  <body>
-    <header>
+  <body onload="SetDefaultValue()">
+    <script>
+      function SetDefaultValue(){
+        var menu = document.getElementById("sidemenu");
+        menu.style.display = "none";
+      }
+      function showHideToggle() {
+        var x = document.getElementById("sidemenu");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        }  
+        else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+    <header class="headPane">
+      <nav class="navbar pagesbar">
+        <ul class="navbar-nav d-inline-flex flex-row">
+            <li class="navbar-item p-2"><a class="nav-link projectsa" href="home.html"><span>Home</span></a></li>
+            <li class="navbar-item p-2"><a class="nav-link projectsa" href="home.html#abcacti"><span>CS Projects</span></a></li>
+            <li class="navbar-item p-2"><a class="nav-link projectsa" href="music.html"><span>Music</span></a></li>
+            <li class="navbar-item p-2"><a class="nav-link resumea" href="resume.html"><span>Resume</span></a></li>
+            <li class="navbar-item p-2"><a class="nav-link abouta" href="about.html"><span>About</span></img>
+            </a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-wrap">
+        <a onclick="showHideToggle()"><i class="fa fa-bars fa-2x" alt="hamburger menu"></i></a>
+        <div class="sidebar" id="sidemenu">
+          <br>
+          <a class="nav-link projectsmenu" href="home.html"><span>Home</span></a><br>
+          <a class="nav-link scrolla" href="home.html#abcacti"><span>CS Projects</span></a><br>
+          <a class="nav-link musica" href="music.html"><span>Music</span></a><br>
+          <a class="nav-link resumea" href="resume.html"><span>Resume</span></a><br>
+          <a class="nav-link abouta" href="about.html"><span>About</span></a>
+        </div>
+      </div>
+
       <div class="container">
-        <h1 class="display-1">A/B Testing: cact-us</h1>
+        <div class="title-text">
+          <h1 class="display-1">A/B Testing: cact-us</h1>
+        </div>
       </div>
     </header>
 
-    <nav class="navbar pagesbar d-inline-flex">
-      <ul class="navbar-nav d-inline-flex flex-row">
-          <li class="navbar-item p-2"><a class="nav-link projectsa" href="home.html"><span>Home/Projects</span></a></li>
-          <li class="navbar-item p-2"><a class="nav-link resumea" href="resume.html"><span>Resume</span></a></li>
-          <li class="navbar-item p-2"><a class="nav-link abouta" href="about.html"><span>About</span></img>
-          </a></li>
-      </ul>
-    </nav>
+    <h4 class="guide-text">Click on the image below to play!</a></h4>
+    <a href="https://intense-mountain-54288.herokuapp.com/"><img class="img-fluid linked-image" style="width: 50%;" src="./images/cactiab/cacti_assortment.png" alt="link to try buying cacti"></a>
+
 
     <div class="background">
       <h2 class="display-3">Background</h2>
@@ -39,10 +75,10 @@
       <h2 class="display-3">Website Designs A and B</h2>
       <br>
       <div class="row">
-        <div class="col pic-box">
+        <div class="col-8 col-sm-7 col-md-5 col-lg-5 mx-auto pic-box">
           <img class="img-fluid" src="./images/cactiab/web_versionA.png" alt="cactus shopping page with horizontal product layout">
         </div>
-        <div class="col pic-box">
+        <div class="col-8 col-sm-7 col-md-5 col-lg-5 mx-auto pic-box">
           <img class="img-fluid" src="./images/cactiab/web_versionB.png" alt="cactus shopping page with vertical product layout">
         </div>
       </div>
@@ -105,33 +141,35 @@
     <div class="log-analysis">
       <h2 class="display-3">Statistical Analysis</h2>
       <br>
-      <div class="row">
-        <div class="col align-self-center log-box">
-          <p>
-          After obtaining the logs from the deployed website, I sorted through the data and completed several calculations 
-          in order to obtain information on how long users took to navigate through the website and complete the task, and 
-          how many users did or did not return to the shopping page. I also made sure to remove extremities in the values.
-          </p>
-        </div>
-        <div class="col log-box-img">
-          <img class="img-fluid" src="./images/cactiab/csv_data.png" alt="data gathered from website logs">
-        </div>
-      </div>  
-      <div class="row">
-        <div class="col log-box-img">
-          <img class="img-fluid" src="./images/cactiab/code_results.png" alt="values obtained from p-test, via t-test and chi-squared testing">
-        </div>
-        <div class="col align-self-center log-box">
-          <p>With these values, I wrote a Python program to display p-score values for each parameter. For completion 
-            time I utilized two sample t-testing, and for return rate I used chi-squared testing. From this I obtained the 
-            following values:
-            <ul>
-              <li>t score for completion time: about -1.44838</li>
-              <li>p score for completion time: about 0.08906</li>
-              <li>chi squared value for return rate: about 0.91667</li>
-              <li>p score from return rate: about 0.33835</li>
-            </ul>
-          </p>
+      <div>
+        <div class="row">
+          <div class="col-7 col-sm-7 col-md-5 col-lg-5 mx-auto align-self-center log-box">
+            <p>
+            After obtaining the logs from the deployed website, I sorted through the data and completed several calculations 
+            in order to obtain information on how long users took to navigate through the website and complete the task, and 
+            how many users did or did not return to the shopping page. I also made sure to remove extremities in the values.
+            </p>
+          </div>
+          <div class="col-7 col-sm-7 col-md-5 col-lg-5 mx-auto log-box-img">
+            <img class="img-fluid" src="./images/cactiab/csv_data.png" alt="data gathered from website logs">
+          </div>
+        </div>  
+        <div class="row">
+          <div class="col-7 col-sm-7 col-md-5 col-lg-5 mx-auto log-box-img">
+            <img class="img-fluid" src="./images/cactiab/code_results.png" alt="values obtained from p-test, via t-test and chi-squared testing">
+          </div>
+          <div class="col-7 col-sm-7 col-md-5 col-lg-5 mx-auto align-self-center log-box">
+            <p>With these values, I wrote a Python program to display p-score values for each parameter. For completion 
+              time I utilized two sample t-testing, and for return rate I used chi-squared testing. From this I obtained the 
+              following values:
+              <ul>
+                <li>t score for completion time: about -1.44838</li>
+                <li>p score for completion time: about 0.08906</li>
+                <li>chi squared value for return rate: about 0.91667</li>
+                <li>p score from return rate: about 0.33835</li>
+              </ul>
+            </p>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -181,6 +219,22 @@
         </div>
       </div>
     </div>
+
+    <br>
+    <br>
+    <footer>
+      <p>
+      <br>
+      Designed by Maliha Islam
+      <br>
+      Home page, about, music, and resume background images and self-photo photographed by Maliha Islam
+      <br>
+      Contents of pages written by Maliha Islam
+      <br>
+      Header images and polaroid thumbnails edited by Maliha Islam on Canva
+      <br>
+      </p>
+    </footer>
 
 
   </body>

@@ -40,13 +40,12 @@
          url('./fonts/caveat-v9-latin-regular.svg#Caveat') format('svg'); /* Legacy iOS */
   }
 
+
 .topPane{
     background: url("./images/filtered-bg.png") center fixed;
     background-size: cover;
-    width: 100vw;
     height: 100vh;
-    z-index: -1;
-
+    position: relative;
 }
 
 .partialPane{
@@ -57,58 +56,104 @@
     z-index: -1;
 }
 
-.invisible-div {
-    width: 100vw;
-    margin-top: 20vh;
-    height: 80vh;
-    position: relative;
-}
-
 /* citation for frosted image creation: 
     https://webdesign.tutsplus.com/tutorials/how-to-create-a-frosted-glass-effect-in-css--cms-32535 */
 
-
 .frosted{
-    width: 80vw;
+    width: 70vw;
     height: 20rem;
     background-color: rgba(150, 150, 150, 0.5);
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
     border-radius: 10px;
-    position: relative;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     overflow: hidden;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(20%);
+}
+
+.front-text{
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .frosted h1{
     z-index: 2;
     color: #3d1d58;
     font-weight: 600;
+    padding: 0;
     font-family: 'Quattrocento';
-    font-size: 8rem;
+    font-size: 7rem;
+    background-color: rgb(212, 175, 229, 0.65);
 }
+
+.frosted h2{
+    z-index: 2;
+    color: #3d1d58;
+    font-weight: 600;
+    font-family: 'Caveat';
+    font-size: 2rem;
+    background-color: rgb(212, 175, 229, 0.65);
+}
+
 
 .pagesbar {
-    float: right;
+    display: inline-flex;
     background: #7FB6BA;
     margin: 1em;
-    padding:2em;
+    padding-right:1em;
+    margin-right:0em;
 }
 
+
+.sidebar-wrap{
+    display: none;
+    background: #7FB6BA;
+    margin: 1em;
+    padding:1em;
+    z-index: 4;
+}
+
+.sidebar-wrap i{
+    color: #3d3c3c;
+}
+
+
 .projectsa{
-    color: white;
+    color: #3d3c3c;
+    font-weight: 500;
     margin-left: 0.5em;
     margin-right: 1em;
 }
 
+.projectsmenu{
+    color: #3d3c3c;
+    font-weight: 500;
+    margin-right: 1em;
+}
+
+.scrolla{
+    color: #3d3c3c;
+    font-weight: 500;
+    margin-right: 1em;
+}
+
+.musica{
+    color: #3d3c3c;
+    font-weight: 500;
+    margin-right: 1em;
+}
+
 .resumea{
-    color: white;
+    color: #3d3c3c;
+    font-weight: 500;
     margin-right: 1em;
 }
 
 .abouta{
-    color:white;
+    color: #3d3c3c;
+    font-weight: 500;
 }
 
 /* citation for arrow: https://www.w3schools.com/howto/howto_css_arrows.asp */
@@ -238,6 +283,11 @@
     height: 45vh;
 }
 
+.pol-img-about{
+    filter: grayscale(80%) saturate(80%) opacity(80%);
+
+}
+
 .view-btn{
     float: right;
     background-color: #F3BBAE !important;
@@ -257,6 +307,13 @@ footer{
     text-align: center;
 }
 
+.pdf{
+    display: block;
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+}
+
 
 
 
@@ -264,10 +321,15 @@ footer{
 
 
 /* all media queries */
-@media only screen and (max-width:990px){
+@media only screen and (max-width:1050px){
     .frosted h1{
         font-size: 5rem!important;
     }
+    .frosted h2{
+        font-size: 1.5rem!important;
+    }
+}
+@media only screen and (max-width:992px){
     .polaroid{
         width: 38vw!important;
         height: 85vh;
@@ -294,6 +356,9 @@ footer{
 @media only screen and (max-width:720px){
     .frosted h1{
         font-size: 5rem!important;
+    }
+    .frosted h2{
+        font-size: 1.5rem!important;
     }
     .polaroid{
         width: 40vw!important;
@@ -324,16 +389,28 @@ footer{
     }
 }
 
+@media (max-width:660px){
+    .frosted h1{
+        font-size: 4.3rem!important;
+    }
+}
 
 
 @media (max-width:576px){
     .frosted h1{
         font-size: 3.5rem!important;
     }
+    .frosted h2{
+        font-size: 1.3rem!important;
+    }
+    .sidebar-wrap{
+        display: inline-block;
+        position: inherit;
+    }
     .polaroid{
         margin-left: auto;
         width: 60vw!important;
-        height: 75vh;
+        height: 70vh;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         background-color: #E9E6EB !important;
         flex-wrap: wrap;
@@ -350,13 +427,19 @@ footer{
         justify-content: center;
         align-content: center;
     }
+    .pagesbar{
+        display:none;
+    }
+    .navbar{
+        display: none;
+    }
 }
 
 @media only screen and (max-width:350px){
     .polaroid{
         margin-left: auto;
         width: 65vw!important;
-        height: 65vh;
+        height: 60vh;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         background-color: #E9E6EB !important;
         flex-wrap: wrap;
@@ -381,7 +464,7 @@ footer{
     p{
         font-size: 0.7em;
     }
-    span{
+    .polaroid span{
         font-size: 0.6em;
     }
     .pagesbar {

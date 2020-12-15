@@ -3,26 +3,61 @@
 <html>
   <head>
     <title>Sonic Skillz</title>
-    <link rel="stylesheet" href="sonicskillz.css">
     <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="sonicskillz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
   </head>
 
-  <body>
-    <header>
-      <div class="container-item">
-        <h1 class="display-1">Sonic Skillz</h1>
-      </div>
+  <body onload="SetDefaultValue()">
+    <script>
+        function SetDefaultValue(){
+          var menu = document.getElementById("sidemenu");
+          menu.style.display = "none";
+        }
+        function showHideToggle() {
+          var x = document.getElementById("sidemenu");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          }  
+          else {
+            x.style.display = "none";
+          }
+        }
+    </script>
+
+    <header class="headPane">
+        <nav class="navbar pagesbar">
+            <ul class="navbar-nav d-inline-flex flex-row">
+                <li class="navbar-item p-2"><a class="nav-link projectsa" href="home.html"><span>Home</span></a></li>
+                <li class="navbar-item p-2"><a class="nav-link projectsa" href="home.html#sonic"><span>CS Projects</span></a></li>
+                <li class="navbar-item p-2"><a class="nav-link projectsa" href="music.html"><span>Music</span></a></li>
+                <li class="navbar-item p-2"><a class="nav-link resumea" href="resume.html"><span>Resume</span></a></li>
+                <li class="navbar-item p-2"><a class="nav-link abouta" href="about.html"><span>About</span></a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-wrap">
+            <a onclick="showHideToggle()"><i class="fa fa-bars fa-2x" alt="hamburger menu"></i></a>
+            <div class="sidebar" id="sidemenu">
+              <br>
+              <a class="nav-link projectsmenu" href="home.html"><span>Home</span></a><br>
+              <a class="nav-link scrolla" href="home.html#sonic"><span>CS Projects</span></a><br>
+              <a class="nav-link musica" href="music.html"><span>Music</span></a><br>
+              <a class="nav-link resumea" href="resume.html"><span>Resume</span></a><br>
+              <a class="nav-link abouta" href="about.html"><span>About</span></a>
+            </div>
+        </div>
+
+        <div class="container-item">
+            <div class="title-text">
+                <h1 class="display-1">Sonic Skillz</h1>
+            </div>
+        </div>
     </header>
     
-    <nav class="navbar pagesbar d-inline-flex">
-        <ul class="navbar-nav d-inline-flex flex-row">
-            <li class="navbar-item p-2"><a class="nav-link projectsa" href="home.html"><span>Home/Projects</span></a></li>
-            <li class="navbar-item p-2"><a class="nav-link resumea" href="resume.html"><span>Resume</span></a></li>
-            <li class="navbar-item p-2"><a class="nav-link abouta" href="about.html"><span>About</span></img>
-            </a></li>
-        </ul>
-    </nav>
+    <h4 class="guide-text">Click on the image below to play!</a></h4>
+    <a href="https://sonicskillz.herokuapp.com/"><img class="img-fluid linked-image" style="width: 50%;" src="./images/sonicskillz/gamer.png" alt="link to play the game"></a>
 
     <div class="context">
       <h2 class="display-3">Background</h2>
@@ -63,25 +98,27 @@
             </p>
         </div>
         <br>
-        <div class="row">
-            <div class="col mainparts-col">
-                <h5>Server-Client Interaction: </h5> 
-                <p>An important segment lending to the multiplayer 
-                functionality of this project was creating the connection between server and client. The server would 
-                allow for simultaneous running of all games,, while the client would keep track of a user's music 
-                information, user data, and game information.</p>
-            </div>
-            <div class="col mainparts-col">
-                <h5>JavaScript: </h5>
-                <p>Before this project, I very much lacked experience in using JavaScript, 
-                    and so as I coded, I picked up some of the semantics and language.</p>
-            </div>
-            <div class="col mainparts-col">
-                <h5>API Usage: </h5>
-                <p>We chose to use the Spotify API in order to gain information on a user's 
-                    music taste in order to create the <strong>playlist generating algorithm</strong>, which will be detailed 
-                    in the next section. Spotify had lots of data points available, and because of this and its overwhelming 
-                    popularity, we decided it would be the best authenticator and API to use for our game.</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-8 col-sm-7 col-md-4 mx-auto mainparts-col">
+                    <h5>Server-Client Interaction: </h5> 
+                    <p>An important segment lending to the multiplayer 
+                    functionality of this project was creating the connection between server and client. The server would 
+                    allow for simultaneous running of all games,, while the client would keep track of a user's music 
+                    information, user data, and game information.</p>
+                </div>
+                <div class="col-8 col-sm-7 col-md-4 mx-auto mainparts-col">
+                    <h5>JavaScript: </h5>
+                    <p>Before this project, I very much lacked experience in using JavaScript, 
+                        and so as I coded, I picked up some of the semantics and language.</p>
+                </div>
+                <div class="col-8 col-sm-7 col-md-4 mx-auto mainparts-col">
+                    <h5>API Usage: </h5>
+                    <p>We chose to use the Spotify API in order to gain information on a user's 
+                        music taste in order to create the <strong>playlist generating algorithm</strong>, which will be detailed 
+                        in the next section. Spotify had lots of data points available, and because of this and its overwhelming 
+                        popularity, we decided it would be the best authenticator and API to use for our game.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -89,7 +126,7 @@
     <div class="algorithm">
         <h2 class="display-3">Playlist-Generating Algorithm</h2>
         <div class="row">
-            <div class="col align-self-center algorithm-text">
+            <div class="col-8 col-sm-7 col-md-4 align-self-center algorithm-text">
                 <p>As per the assignment, we were asked to focus our programs on a central algorithm, and ours was 
                     our own original playlist-generating algorithm. The purpose of this algorithm was to generate 
                     playlists that would allow for fair gameplay for all players. We generate this playlist using 
@@ -97,7 +134,7 @@
                     Spotify data. 
                 </p>
             </div>
-            <div class="col">
+            <div class="col-8 col-sm-7 col-md-4 mx-auto">
                 <img class="img-fluid" src="./images/sonicskillz/playlist_algo_dia.png" alt="how information for the algorithm is passed">
             </div>
         </div>
@@ -111,10 +148,10 @@
                 The Song and Word Association. The sketches that my team and I came up with are featured below:
             </p>
             <div class="row">
-                <div class="col">
+                <div class="col-8 col-sm-7 col-md-4 align-self-center mx-auto">
                     <img class="img-fluid" src="./images/sonicskillz/lofi_sketch.jpeg" alt="sketch of guess the song game">
                 </div>
-                <div class="col">
+                <div class="col-8 col-sm-7 col-md-4 align-self-center mx-auto">
                     <img class="img-fluid" src="./images/sonicskillz/lofi_sketch_word.jpg" alt="sketch of word association game">
                 </div>
             </div>
@@ -126,24 +163,24 @@
                 program. Some of our frames are featured below:
             </p>
             <div class="row figmaimg">
-                <div class="col">
+                <div class="col-8 col-sm-7 col-md-4 align-self-center mx-auto">
                     <img class="img-fluid" src="./images/sonicskillz/title_screen_proto.png" alt="prototyped title screen">
                 </div>
-                <div class="col">
+                <div class="col-8 col-sm-7 col-md-4 align-self-center mx-auto">
                     <img class="img-fluid" src="./images/sonicskillz/share_code_proto.png" alt="prototyped game code sharing">
                 </div>
-                <div class="col">
+                <div class="col-8 col-sm-7 col-md-4 align-self-center mx-auto">
                     <img class="img-fluid" src="./images/sonicskillz/settings_proto.png" alt="prototyped game settings">
                 </div>
             </div>
             <div class="row figmaimg">
-                <div class="col">
+                <div class="col-8 col-sm-7 col-md-4 align-self-center mx-auto">
                     <img class="img-fluid" src="./images/sonicskillz/waiting_proto.png" alt="prototyped waiting screen while one player takes a turn">
                 </div>
-                <div class="col">
+                <div class="col-8 col-sm-7 col-md-4 align-self-center mx-auto">
                     <img class="img-fluid" src="./images/sonicskillz/guess_proto.png" alt="prototyped screen for inputting song guess">
                 </div>
-                <div class="col">
+                <div class="col-8 col-sm-7 col-md-4 align-self-center mx-auto">
                     <img class="img-fluid" src="./images/sonicskillz/victory_proto.png" alt="prototyped winning screen">
                 </div>
             </div>
@@ -179,10 +216,10 @@
             </p>
         </div>
         <div class="row levelimg">
-            <div class="col">
+            <div class="col-8 col-sm-7 col-md-4 align-self-center mx-auto">
                 <img class="img-fluid" src="./images/sonicskillz/easy_med_hard.png" alt="difficulty level select">
             </div>
-            <div class="col">
+            <div class="col-8 col-sm-7 col-md-4 align-self-center mx-auto">
                 <img class="img-fluid" src="./images/sonicskillz/new_guess.png" alt="guessing screen and timer">
             </div>
         </div>
@@ -192,14 +229,30 @@
     <div class="end">
         <h2 class="display-3">Final Product & End Notes</h2>
         <div class="end-text">
-            <h4>Link to play Guess the Song <a href="https://sonicskillz.herokuapp.com/">on Sonic Skillz</a></h4>
             <p>Creating this project, especially in the midst of a global pandemic, was incredible difficult 
                 and time-consuming but I was able to bring a lot of ideas to my team just as they brought lots 
                 of ideas and knowledge to me. From this project, I grew as a programmer both in skill and in 
                 self-confidence level, and I hope to create more substantial projects like this one in the future!
             </p>
         </div>
+        <a href="https://sonicskillz.herokuapp.com/"><h4 class="guide-text">Click this line of text to play!</h4></a>
     </div>
+
+    <br>
+    <br>
+    <footer>
+        <p>
+        <br>
+        Designed by Maliha Islam
+        <br>
+        Home page, about, music, and resume background images and self-photo photographed by Maliha Islam
+        <br>
+        Contents of pages written by Maliha Islam
+        <br>
+        Header images and polaroid thumbnails edited by Maliha Islam on Canva
+        <br>
+        </p>
+    </footer>
 
 
   </body>

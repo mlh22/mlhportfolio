@@ -3,84 +3,121 @@
 <html>
   <head>
     <title>Portfolio</title>
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
   </head>
 
-  <body>
-    <header>
-      <div class="topPane">
-        <nav class="navbar pagesbar d-inline-flex">
+  <body onload="SetDefaultValue()">
+    <script>
+      function SetDefaultValue(){
+        var menu = document.getElementById("sidemenu");
+        menu.style.display = "none";
+      }
+      function goToProjects(){
+        var projects = document.getElementById("project-title");
+        projects.scrollIntoView({behavior: "smooth"});
+      }
+      function showHideToggle() {
+        var x = document.getElementById("sidemenu");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        }  
+        else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+
+    <header class="topPane">
+        <nav class="navbar pagesbar">
           <ul class="navbar-nav d-inline-flex flex-row">
-              <li class="navbar-item p-2"><a class="nav-link projectsa" href="home.html"><span>Home/Projects</span></a></li>
+              <li class="navbar-item p-2"><a class="nav-link projectsa" href="home.html"><span>Home</span></a></li>
+              <li class="navbar-item p-2"><a class="nav-link scrolla" onclick="goToProjects()"><span>CS Projects</span></a></li>
+              <li class="navbar-item p-2"><a class="nav-link musica" href="music.html"><span>Music</span></a></li>
               <li class="navbar-item p-2"><a class="nav-link resumea" href="resume.html"><span>Resume</span></a></li>
-              <li class="navbar-item p-2"><a class="nav-link abouta" href="about.html"><span>About</span></img>
-              </a></li>
+              <li class="navbar-item p-2"><a class="nav-link abouta" href="about.html"><span>About</span></a></li>
           </ul>
         </nav>
-        <div class="d-flex flex-column align-items-center justify-content-center invisible-div">
-          <div class="frosted"><h1 class="display-2">Indiv Idual</h1></div>
+
+        <div class="sidebar-wrap">
+          <a onclick="showHideToggle()"><i class="fa fa-bars fa-2x" alt="hamburger menu"></i></a>
+          <div class="sidebar" id="sidemenu">
+            <br>
+            <a class="nav-link projectsmenu" href="home.html"><span>Home</span></a><br>
+            <a class="nav-link scrolla" onclick="goToProjects()"><span>CS Projects</span></a><br>
+            <a class="nav-link musica" href="music.html"><span>Music</span></a><br>
+            <a class="nav-link resumea" href="resume.html"><span>Resume</span></a><br>
+            <a class="nav-link abouta" href="about.html"><span>About</span></a>
+          </div>
         </div>
-        <p><i class="scroll-arrow-steady"></i></p>
-        <p><i class="scroll-arrow"></i></p>
-      </div>
+
+
+        <div class="frosted d-flex flex-column align-items-center justify-content-center">
+          <div class="front-text">
+            <h1 class="display-2">Maliha Islam</h1>
+            <h2 class="display-6" class="align-items-center">&#128187; UI/UX designer, software engineer, and musician &#127911;</h2>
+          </div>
+        </div>
+        <p><i class="scroll-arrow-steady" onclick="goToProjects()"></i></p>
+        <p><i class="scroll-arrow" onclick="goToProjects()"></i></p>
     </header>
     
     
-    <h2 class="display-2 project-page-head">Project Snapshots</h2>
+    <h2 id="project-title" class="display-2 project-page-head">Project Snapshots</h2>
     <div class="container-fluid">
       <div class='row card-rows'>
-        <div class="col-8 col-sm-7 col-md-6 col-lg-5">
-          <div class="card polaroid">
-            <img class="card-img-top pol-img" src="./images/sonicskillz/home.png" alt="sonic skills rep image">
+        <div class="col-8 col-sm-7 col-md-6 col-lg-5 mx-auto">
+          <div class="card polaroid" id="sonic">
+            <img class="card-img-top pol-img" style="filter: hue-rotate(100deg) saturate(50%);" src="./images/sonicskillz/gamer.png" alt="sonic skills rep image">
             <div class="card-body">
               <h4 class="card-title display-5">Sonic Skillz</h5>
-              <h6 class="card-subtitle month-year">03/2020 - 05/2020</h6>
+              <h5 class="card-subtitle month-year">03/2020 - 05/2020</h6>
               <p class="card-text">Multiplayer Spotify game app</p>
               <a href="sonicskillzwrite.html" class="btn view-btn"><span>VIEW MORE</span></a>
             </div>
           </div>
         </div>
-        <div class="col-8 col-sm-7 col-md-6 col-lg-5">
-          <div class="card polaroid">
-            <img class="card-img-top pol-img" src="./images/garageband/music_tracks.png" alt="sonic skills rep image">
+        <div class="col-8 col-sm-7 col-md-6 col-lg-5 mx-auto">
+          <div class="card polaroid" id="garageband">
+            <img class="card-img-top pol-img" style="filter: saturate(50%);" src="./images/garageband/gb_thumbnail.png" alt="garageband personas rep image">
             <div class="card-body">
               <h4 class="card-title display-5">Personas: GarageBand</h5>
-              <h6 class="card-subtitle month-year">10/2020</h6>
+              <h5 class="card-subtitle month-year">10/2020</h6>
               <p class="card-text">Analysis of GarageBand interface</p>
               <a href="garagebandanalysis.html" class="btn view-btn"><span>VIEW MORE</span></a>
             </div>
           </div>
         </div>
-        <div class="col-8 col-sm-7 col-md-6 col-lg-5">
-          <div class="card polaroid">
-            <img class="card-img-top pol-img" src="./images/afm47/website-ssone.png" alt="sonic skills rep image">
+        <div class="col-8 col-sm-7 col-md-6 col-lg-5 mx-auto">
+          <div class="card polaroid" id="afm">
+            <img class="card-img-top pol-img" src="./images/afm47/afm_thumbnail.png" alt="afm47 redesign rep image">
             <div class="card-body">
               <h4 class="card-title">AFM47 Local: Redesign</h5>
-              <h6 class="card-subtitle month-year">10/2020</h6>
+              <h5 class="card-subtitle month-year">10/2020</h6>
               <p class="card-text">New design for a musicians' union website</p>
               <a href="afmredesign.html" class="btn view-btn"><span>VIEW MORE</span></a>
             </div>
           </div>
         </div>
-        <div class="col-8 col-sm-7 col-md-6 col-lg-5">
-          <div class="card polaroid">
-            <img class="card-img-top pol-img" src="./images/cactiab/abtesting_infographic.png" alt="sonic skills rep image">
+        <div class="col-8 col-sm-7 col-md-6 col-lg-5 mx-auto">
+          <div class="card polaroid" id="abcacti">
+            <img class="card-img-top pol-img" style="filter: saturate(50%) hue-rotate(45deg);" src="./images/cactiab/cacti_assortment.png" alt="a b testing rep image">
             <div class="card-body">
               <h4 class="card-title">Cact-us: AB Testing</h5>
-              <h6 class="card-subtitle month-year">10/2020</h6>
+              <h5 class="card-subtitle month-year">10/2020</h6>
               <p class="card-text">An in-depth study of website layout</p>
               <a href="cactiabtest.html" class="btn view-btn"><span>VIEW MORE</span></a>
             </div>
           </div>
         </div>
-        <div class="col-8 col-sm-7 col-md-6 col-lg-5">
-          <div class="card polaroid">
-            <img class="card-img-top pol-img" src="./images/rrrecords/screenshot-dev.png" alt="sonic skills rep image">
+        <div class="col-8 col-sm-7 col-md-6 col-lg-5 mx-auto">
+          <div class="card polaroid" id="recordshop">
+            <img class="card-img-top pol-img" src="./images/rrrecords/record_thumbnail.png" alt="rr records rep image">
             <div class="card-body">
               <h4 class="card-title">RR Records</h5>
-              <h6 class="card-subtitle month-year">12/2020</h6>
+              <h5 class="card-subtitle month-year">12/2020</h6>
               <p class="card-text">
                 An asynchronous music-buying program</p>
               <a href="rrrecords.html" class="btn view-btn"><span>VIEW MORE</span></a>
@@ -92,14 +129,14 @@
 
     <footer>
       <p>
-        <br>
-      Designed by Indiv Idual
       <br>
-      Home page header image, project polaroid images, and contents of project pages owned by Indiv Idual
+      Designed by Maliha Islam
       <br>
-      Header images for Sonic Skillz and Persona:GarageBand owned by Indiv Idual
+      Home page, about, music, and resume background images and self-photo photographed by Maliha Islam
       <br>
-      Other project page header images usage protected under educational use
+      Contents of pages written by Maliha Islam
+      <br>
+      Header images and polaroid thumbnails edited by Maliha Islam on Canva
       <br>
       </p>
     </footer>

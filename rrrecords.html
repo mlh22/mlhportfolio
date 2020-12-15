@@ -3,26 +3,60 @@
 <html>
   <head>
     <title>Development - RR Record Shop</title>
-    <link rel="stylesheet" href="devstyle.css">
     <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="devstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
   </head>
 
-  <body>
-    <header>
-      <div class="container">
-        <h1 class="display-1">Development: RR Record Shop</h1>
+  <body onload="SetDefaultValue()">
+    <script>
+      function SetDefaultValue(){
+        var menu = document.getElementById("sidemenu");
+        menu.style.display = "none";
+      }
+      function showHideToggle() {
+        var x = document.getElementById("sidemenu");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        }  
+        else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+    <header class="headPane">
+      <nav class="navbar pagesbar">
+        <ul class="navbar-nav d-inline-flex flex-row">
+            <li class="navbar-item p-2"><a class="nav-link projectsa" href="home.html"><span>Home</span></a></li>
+            <li class="navbar-item p-2"><a class="nav-link projectsa" href="home.html#recordshop"><span>CS Projects</span></a></li>
+            <li class="navbar-item p-2"><a class="nav-link projectsa" href="music.html"><span>Music</span></a></li>
+            <li class="navbar-item p-2"><a class="nav-link resumea" href="resume.html"><span>Resume</span></a></li>
+            <li class="navbar-item p-2"><a class="nav-link abouta" href="about.html"><span>About</span></img>
+            </a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-wrap">
+        <a onclick="showHideToggle()"><i class="fa fa-bars fa-2x" alt="hamburger menu"></i></a>
+        <div class="sidebar" id="sidemenu">
+          <br>
+          <a class="nav-link projectsmenu" href="home.html"><span>Home</span></a><br>
+          <a class="nav-link scrolla" href="home.html#recordshop"><span>CS Projects</span></a><br>
+          <a class="nav-link musica" href="music.html"><span>Music</span></a><br>
+          <a class="nav-link resumea" href="resume.html"><span>Resume</span></a><br>
+          <a class="nav-link abouta" href="about.html"><span>About</span></a>
+        </div>
+      </div>
+      <div class="container-item">
+        <div class="title-text">
+          <h1 class="display-1">Development: RR Record Shop</h1>
+        </div>
       </div>
     </header>
 
-    <nav class="navbar pagesbar d-inline-flex">
-      <ul class="navbar-nav d-inline-flex flex-row">
-          <li class="navbar-item p-2"><a class="nav-link projectsa" href="home.html"><span>Home/Projects</span></a></li>
-          <li class="navbar-item p-2"><a class="nav-link resumea" href="resume.html"><span>Resume</span></a></li>
-          <li class="navbar-item p-2"><a class="nav-link abouta" href="about.html"><span>About</span></img>
-          </a></li>
-      </ul>
-    </nav>
+    <h4 class="guide-text">Click on the image below to try it out!</a></h4>
+    <a href="https://rr-recordshop.herokuapp.com"><img class="img-fluid linked-image" style="width: 50%;" src="./images/rrrecords/record_thumbnail.png" alt="link to visit rr record shop"></a>
+
 
     <div class="assignment-context">
       <h2 class="display-3">The Assignment</h2>
@@ -49,10 +83,10 @@
       <h2 class="display-3">The Organization</h2>
       <br>
       <div class="row">
-        <div class="col">
+        <div class="col-8 col-sm-7 col-md-6 mx-auto">
           <img src="./images/rrrecords/structure.png" alt="organization of components within the application" class="img-fluid align-self-center">
         </div>
-        <div class="col org-box align-self-center">
+        <div class="col-8 col-sm-7 col-md-6 mx-auto org-box align-self-center">
           <p>In order to develop this application, I had to put a lot of thought into how components would 
             communicate with one another. The diagram depicts the flow of information between my components. The App 
             component handles the main rendering, and sends the list of records to the filtered list component, which 
@@ -69,7 +103,7 @@
       <h2 class="display-3">The Styling</h2>
       <br>
       <div class="row">
-        <div class="col style-words-box align-self-center">
+        <div class="col-8 col-sm-7 col-md-6 mx-auto style-words-box align-self-center">
           <p>
           My main goals with the design were to incorporate both timeless contemporary styles and retro designs. While the 
           layout of the website is very clean with neatly-organized divs and cards to hold products and elements, the font 
@@ -77,7 +111,7 @@
           Additionally, I wanted to focus on album art, and the design as it is now gives the feel of shopping for vinyl 
           records, with large square images reminiscent of record sleeves. </p>
         </div>
-        <div class="col">
+        <div class="col-8 col-sm-7 col-md-6 mx-auto">
           <img src="./images/rrrecords/styleguide.png" alt="style guide depicting colors, fonts, buttons, and menus in the application" class="img-fluid align-self-center">
         </div>
       </div>
@@ -106,12 +140,6 @@
       <div class="screenshot">
         <img src="./images/rrrecords/screenshot-dev.png" alt="screenshot of finished product" class="img-fluid mx-auto">
       </div>
-      <p class="links">
-        <br>
-        Link to the website: <a href="https://rr-recordshop.herokuapp.com">RR Record Shop</a> 
-        <br>
-        Link to the GitHub repository: <a href="https://github.com/mlh22/recordshop-react">Record Shop GitHub repo</a>
-      </p>
       <br>
       <h3 class="display-5">Features</h3>
       <br>
@@ -135,18 +163,18 @@
       <br>
       <div class="row">
         <div class="col takeawaybox">
-          <p>Structure is incredibly important!! Because all of the states exist in the App component, there needs to 
+          <p><strong>Structure!!</strong> Because all of the states exist in the App component, there needs to 
             be strong communication between components in the application to pass along vital information.
           </p>
         </div>
         <div class="col takeawaybox">
-          <p>Accessibility!! My application (as well as many other applications) are heavily visual experiences, which can 
+          <p><strong>Accessibility!!</strong> My application (as well as many other applications) are heavily visual experiences, which can 
             abandon lots of users. Thus, using descriptive, meaningful alt tags, spacing elements out effectively, and 
             maintaining hierarchal structure can go a long way in making programs accessible for others.
           </p>
         </div>
         <div class="col takeawaybox">
-          <p>Asynchronous rendering!! This was my first time using React, and this project gave me an opportunity to work with 
+          <p><strong>Asynchronous redering!!</strong> This was my first time using React, and this project gave me an opportunity to work with 
             this language and expand the logical thinking I had developed with previous coding experiences to the component 
             structure here.
           </p>
@@ -154,6 +182,28 @@
       </div>
     </div>
 
+    <a href="https://rr-recordshop.herokuapp.com"><h4 class="guide-text">Click this line of text to visit!</h4></a>
+
+    <p class="links">
+      <br>
+      Link to the GitHub repository: <a href="https://github.com/mlh22/recordshop-react">Record Shop GitHub repo</a>
+    </p>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p>
+        <br>
+        Designed by Maliha Islam
+        <br>
+        Home page, about, music, and resume background images and self-photo photographed by Maliha Islam
+        <br>
+        Contents of pages written by Maliha Islam
+        <br>
+        Header images and polaroid thumbnails edited by Maliha Islam on Canva
+        <br>
+        </p>
+    </footer>
 
   </body>
 </html>

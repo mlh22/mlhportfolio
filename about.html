@@ -3,8 +3,8 @@
 <html>
   <head>
     <title>About - Portfolio</title>
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="index.css">
     <!--Adding icon library-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -12,33 +12,61 @@
 
   </head>
 
-  <body>
-    <header>
-        <div class="partialPane">
-          <nav class="navbar pagesbar d-inline-flex">
-            <ul class="navbar-nav d-inline-flex flex-row">
-                <li class="navbar-item p-2"><a class="nav-link projectsa" href="home.html"><span>Home/Projects</span></a></li>
-                <li class="navbar-item p-2"><a class="nav-link resumea" href="resume.html"><span>Resume</span></a></li>
-                <li class="navbar-item p-2"><a class="nav-link abouta" href="about.html"><span>About</span></img>
-                </a></li>
-            </ul>
-          </nav>
+  <body onload="SetDefaultValue()">
+    <script>
+      function SetDefaultValue(){
+        var menu = document.getElementById("sidemenu");
+        menu.style.display = "none";
+      }
+      function showHideToggle() {
+        var x = document.getElementById("sidemenu");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        }  
+        else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+
+    <header class="partialPane">
+        <nav class="navbar pagesbar">
+          <ul class="navbar-nav d-inline-flex flex-row">
+              <li class="navbar-item p-2"><a class="nav-link projectsa" href="home.html"><span>Home</span></a></li>
+              <li class="navbar-item p-2"><a class="nav-link projectsa" href="home.html#project-title"><span>CS Projects</span></a></li>
+              <li class="navbar-item p-2"><a class="nav-link projectsa" href="music.html"><span>Music</span></a></li>
+              <li class="navbar-item p-2"><a class="nav-link resumea" href="resume.html"><span>Resume</span></a></li>
+              <li class="navbar-item p-2"><a class="nav-link abouta" href="about.html"><span>About</span></img>
+              </a></li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-wrap">
+          <a onclick="showHideToggle()"><i class="fa fa-bars fa-2x" alt="hamburger menu"></i></a>
+          <div class="sidebar" id="sidemenu">
+            <br>
+            <a class="nav-link projectsmenu" href="home.html"><span>Home</span></a><br>
+            <a class="nav-link scrolla" href="home.html#project-title"><span>CS Projects</span></a><br>
+            <a class="nav-link musica" href="music.html"><span>Music</span></a><br>
+            <a class="nav-link resumea" href="resume.html"><span>Resume</span></a><br>
+            <a class="nav-link abouta" href="about.html"><span>About</span></a>
+          </div>
         </div>
-      </header>
+    </header>
 
       <div class="row">
           <div class="col">
             <div class="card about-pol">
-                <img class="card-img-top pol-img" src="./images/filtered-bg.png" alt="profile image" style="margin:auto;">
+                <img class="card-img-top pol-img pol-img-about" src="./images/self.JPG" alt="profile image" style="margin:auto;">
                 <div class="card-body">
                   <h4 class="card-title display-5">THIS IS ME </h5>
-                  <h6 class="card-subtitle month-year">present</h6>
+                  <h5 class="card-subtitle month-year">10/2000 - now</h6>
                   <div class="button-row">
-                    <div><a href="https://github.com/"><i class="fa fa-github fa-2x socialicons" alt="github home page"></i></a></div>
-                    <div><a href="https://www.linkedin.com/"><i class="fa fa-linkedin fa-2x socialicons" alt="linkedin home page"></i></a></div>
-                    <div><a href="https://mail.google.com/mail/"><i class="fa fa-envelope fa-2x socialicons" alt="gmail home page"></i></a></div>
-                    <div><a href="https://twitter.com/home"><i class="fa fa-twitter fa-2x socialicons" alt="twitter home page"></i></a></div>
-                    <div><a href="https://www.instagram.com/"><i class="fa fa-instagram fa-2x socialicons" alt="instagram home page"></i></a></div>
+                    <div><a href="https://github.com/mlh22"><i class="fa fa-github fa-2x socialicons" alt="github home page"></i></a></div>
+                    <div><a href="https://www.linkedin.com/in/maliha-islam-b71a6b146/"><i class="fa fa-linkedin fa-2x socialicons" alt="linkedin home page"></i></a></div>
+                    <div><a href="mailto:maliha_islam@brown.edu"><i class="fa fa-envelope fa-2x socialicons" alt="gmail home page"></i></a></div>
+                    <div><a href="https://twitter.com/mal_liha"><i class="fa fa-twitter fa-2x socialicons" alt="twitter home page"></i></a></div>
+                    <div><a href="https://www.instagram.com/mal_lihai/"><i class="fa fa-instagram fa-2x socialicons" alt="instagram home page"></i></a></div>
                   </div>
                 </div>
               </div>
@@ -47,7 +75,7 @@
             <div class="about-me">
               <h2 class="display-2 about-page-head">About</h2>
               <p>
-                Hello! My name is [Indiv Idual] and I am a [year]-year student at Brown University. I am interested in 
+                Hello! My name is Maliha Islam and I am a third-year student at Brown University. I am interested in 
                 software development and UI/UX design, particularly in the arts realm. Nearly all of my time is spent 
                 leaning over a laptop, but I enjoy creating, designing, and producing even on my own free time. I am passionate 
                 about the arts and about human rights, and will often spend all my time talking/ranting about either of the 
@@ -59,14 +87,14 @@
 
       <footer>
         <p>
-          <br>
-        Designed by Indiv Idual
         <br>
-        Home page header image and project screenshot images owned by Indiv Idual
+        Designed by Maliha Islam
         <br>
-        Header images for Sonic Skillz and Persona:GarageBand owned by Indiv Idual
+        Home page, about, music, and resume background images and self-photo photographed by Maliha Islam
         <br>
-        Other project page header images usage protected under educational use
+        Contents of pages written by Maliha Islam
+        <br>
+        Header images and polaroid thumbnails edited by Maliha Islam on Canva
         <br>
         </p>
       </footer>
